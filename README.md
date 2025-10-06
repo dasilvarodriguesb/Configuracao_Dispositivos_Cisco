@@ -141,3 +141,16 @@ Estes comandos não são obrigatórios, mas melhoram a **segurança, usabilidade
 | `show cdp neighbors` | Exibe dispositivos Cisco diretamente conectados |
 | `show users` | Lista usuários atualmente conectados |
 | `show clock` | Mostra a hora atual do roteador |
+|`Sw (config)# show interfaces status`| Apresenta status das interfaces do switch | 
+
+
+#### 🌐 Configurações de Interface Vlan no Switch
+
+| Comando                                  | Descrição                                  |
+| ---------------------------------------- | ------------------------------------------ |
+| `Sw (config)# interface vlan 1`          | Interface de configuração global para acesso remoto |
+| `Sw(config-if)# ip address 192.168.1.20 255.255.255` | Atribui endereço IP a interface Vlan 1                      |
+| `description <texto>`                    | Adiciona uma descrição à interface             |
+| `no shutdown`                            | Ativa a interface (por padrão as interfaces estão desativadas                         |
+| `shutdown`                               | Desativa a interface                       |
+| `Sw(config)# ip default-gateway 192.168.1.1` |Configura Endereço de gateway no Switch para gerenciar remotamente o dispositivo|
