@@ -39,6 +39,7 @@ A navegação entre os modos é fundamental para a configuração correta dos di
 | `show ip route` | Exibe a tabela de rotas do dispositivo|
 | `show interface status` | Exibe o Status das interfaces do switch |
 | `show mac address-table` | Mostra a tabela de endereços MAC |
+| `show ip dhcp binding` | Exibe a lista de endereços IP atualmente atribuídos aos clientes DHCP. |
 
 ---
 
@@ -114,6 +115,19 @@ Estes comandos não são obrigatórios, mas melhoram a **segurança, usabilidade
 | `exit` | Retorna ao modo anterior |
 
 ---
+
+### 📘 Configurações de DHCP
+
+| Comando | Descrição |
+|--------|-----------|
+| `ip dhcp pool REDE_LOCAL` | Cria um pool (conjunto) de endereços IP que o roteador distribuirá automaticamente aos clientes da rede. |
+| `network 192.168.10.0 255.255.255.0` | Define a rede e a máscara de sub-rede associadas ao pool DHCP. |
+| `default-router 192.168.10.1` | Informa o gateway padrão que os dispositivos usarão para acessar outras redes. |
+| `dns-server 8.8.8.8` | Define o servidor DNS que os clientes usarão para resolver nomes de domínio. |
+| `ip dhcp excluded-address 192.168.10.1 192.168.10.99` | Exclui uma faixa de endereços IP da distribuição automática (reservados para equipamentos com IP fixo, como roteador ou servidor).|
+| `dns-server 8.8.8.8` | Define o servidor DNS que os clientes usarão para resolver nomes de domínio. |
+
+---
 ### ❌ Desativar Pesquisa DNS (Evita Lentidão com Comandos Incorretos)
 
 | Comando | Descrição |
@@ -141,7 +155,8 @@ Estes comandos não são obrigatórios, mas melhoram a **segurança, usabilidade
 | `show cdp neighbors` | Exibe dispositivos Cisco diretamente conectados |
 | `show users` | Lista usuários atualmente conectados |
 | `show clock` | Mostra a hora atual do roteador |
-|`Sw (config)# show interfaces status`| Apresenta status das interfaces do switch | 
+|`Sw (config)# show interfaces status`| Apresenta status das interfaces do switch |
+
 
 
 #### 🌐 Configurações de Interface Vlan no Switch
